@@ -1,0 +1,248 @@
+html {
+  box-sizing: border-box;
+  --lightred: #ffe5e5;
+  --lightyellow: #ffffe5;
+  --lightgreen: #e5ffe5;
+  --lightblue: #e5ffff;
+  --lightviolet: #e5e5ff;
+  --lightrose: #ffe5ff;
+  --lightgrey: #cccccc;
+  --skyblue: rgb(153, 204, 255);
+  --skyblueopacity: rgb(153, 204, 255, 0.8);
+  --darkblue: #1a8cff;
+  --rosered: #f65596;
+}
+
+body {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 2;
+  background-image: linear-gradient(
+    var(--lightred),
+    var(--lightyellow),
+    var(--lightgreen),
+    var(--lightblue),
+    var(--lightviolet),
+    var(--lightrose)
+  );
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.App {
+  font-family: "Mukta", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  display: inline;
+}
+
+.Sekcja {
+  padding-bottom: 10px;
+  border-top: 2px solid var(--lightgrey);
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, white, var(--lightgrey)) 100% 0 0 0;
+}
+
+[class$="_wiersz"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Naglowek {
+  font-size: 1.5rem;
+  margin: 24px 0;
+}
+
+.Wiersz_label {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.Naglowek_button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+.Naglowek_button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px;
+  font-family: inherit;
+  text-align: right;
+  font-size: 85%;
+  max-width: 100%;
+}
+
+.InputNumber {
+  max-width: 100%;
+  width: 110px;
+  margin-left: 5px;
+}
+
+input:focus {
+  box-shadow: 0 0 0 1px grey;
+  outline: none;
+}
+
+.Formularz_button {
+  border: none;
+  font-family: inherit;
+  font-size: 1.4rem;
+  width: 30%;
+  min-width: 80px;
+  max-width: 160px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: var(--skyblue);
+  font-weight: 700;
+}
+
+.Formularz_button:hover {
+  background-color: var(--skyblueopacity);
+}
+
+.Formularz_button:focus {
+  box-shadow: 0 0 0 1pt var(--darkblue);
+  outline: none;
+}
+
+.Podsumowanie_podnaglowek {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 800;
+  border-top: 1px solid var(--lightgrey);
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, white, var(--lightgrey)) 100% 0 0 0;
+}
+
+.Podsumowanie_wiersz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Wynik {
+  font-weight: 700;
+}
+
+.Wyzywienie {
+  display: flex;
+}
+
+.asteriks {
+  color: var(--rosered);
+}
+
+.notka {
+  font-size: 0.8rem;
+}
+
+.walidacja {
+  color: var(--rosered);
+  text-decoration: underline;
+}
+
+@media (min-width: 980px) and (max-width: 1024px) {
+  .App {
+    width: 76%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 980px) {
+  .App {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .Diety_wiersz .Wyzywienie {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 760px) {
+  .App {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  [class$="_wiersz"] {
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .Diety_wiersz .Wyzywienie {
+    flex-direction: column;
+  }
+
+  .Podsumowanie_wiersz {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  [class$="_wiersz"] {
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .Diety_wiersz .Wyzywienie {
+    flex-direction: column;
+  }
+
+  .Podsumowanie_wiersz {
+    align-items: center;
+  }
+
+  .Podsumowanie_podnaglowek {
+    align-items: center;
+  }
+}
