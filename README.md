@@ -1,2 +1,7 @@
 # react-polish-business-trip-calculator
-Created with CodeSandbox
+
+Web application for calculating business trip costs in Poland.
+
+Technologies used:
+* ReactJS
+* BEM
